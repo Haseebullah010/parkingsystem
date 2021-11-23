@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    
+    <!-- <link rel="stylesheet" href="/static/bootstrap/js2/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css"> -->
+		
+		
+	<link rel="stylesheet" href="/static/bootstrap/js2/css/style.css">
+  <link rel="stylesheet" href="/static/bootstrap/css/customnavbar.css">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"> -->
+  <script src="/static/bootstrap/js/jquery.js"></script>
+    
+    <title>all data</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark  static-top background">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+          </a>
+          <a class="navbar-brand" href="#"> <h2>Parking System</h2> </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link btn btn-block  " aria-current="page" href="{% url 'SIGNIN' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn btn-block  " aria-current="page" href="{% url 'ALL' %}">Overall Data</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn btn-block active " aria-current="page" href="{% url 'FLAT' %}">Remaining Flats</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn btn-block  " aria-current="page" href="{% url 'SLOT' %}">Remaining Slots</a>
+              </li>
+              <li class="nav-item px-1">
+                <a class="nav-link btn  btn-block btn-outline-primary" href="{% url 'USER_LOGOUT' %}">logout</a>
+              </li>
+              
+             
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="p-5"></div>
+
+      <div class="row" style="color: white; text-decoration: thistle; font-size: 15pt; font-family: Verdana, Geneva, Tahoma, sans-serif;" >
+        <div class="col" > 
+          <div class="container"  >
+
+            <h2> 1BHK flats  </h2>
+            <h5 style="background-color: black;">Toatal : {{total2}} Reserved : {{reserve2}} Avail : {{avail2}}</h5>
+            {% for i in studioflats2 %}
+            {{i}}
+            {% endfor %}
+    
+          </div>
+        </div>
+        
+        <div class="col" >
+          <div class="container" >
+            <h2> 2BHK flats  </h2>
+            <h5 style="background-color: black;">Toatal : {{total3}} Reserved : {{reserve3}} Avail : {{avail3}}</h5>
+           
+            {% for i in studioflats3 %}
+            {{i}}
+            {% endfor %}
+    
+          </div>
+
+        </div>
+
+      </div> 
+      
+      <div class="p-5"></div>
+      <div class="row" style="color: white; text-decoration: thistle; font-size: 15pt; font-family: Verdana, Geneva, Tahoma, sans-serif;" >
+        <div class="col" > 
+          <div class="container"  >
+            <h2> 3BHK flats  </h2>
+            <h5 style="background-color: black;" >Toatal : {{total1}} Reserved : {{reserve1}} Avail : {{avail1}}</h5>
+           
+            {% for i in studioflats1 %}
+            {{i}}
+            {% endfor %}
+    
+          </div>
+        </div>
+        
+        <div class="col" >
+          <div class="container" >
+            <h2> Studios  </h2>
+            <h5 style="background-color: black;">Toatal : {{total}} Reserved : {{reserve}} Avail : {{avail}}</h5>
+           
+            {% for i in studioflats %}
+            {{ i}}
+            {% endfor %}
+    
+          </div>
+
+        </div>
+
+      </div>
+
+      {{context}}
+      <script src="/static/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

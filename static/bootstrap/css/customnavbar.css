@@ -1,0 +1,26 @@
+.background{
+    background-image: url('/static/images/background.jpg');
+}
+
+
+body{
+    background-image: url('/static/images/Data/Backgrounds/w.jpg');
+    height: 100%;
+    width: 100%;
+    background: rgb(20, 6, 78);
+}
+
+h2{
+    text-align: center;
+    color: #fff;
+}
+li{
+    text-align: left;
+    size: 20px;
+}
+.custom {
+    width: 78px !important;
+}
+
+
+
